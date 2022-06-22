@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    <script>
+        window.onload = function () {
+            
+            var chart1 = new CanvasJS.Chart("chartContainer1", {
+                animationEnabled: true, theme: "light2", 
+                title: { 
+                    text: "Weekly Achievement -  Dinas Unconfirmed ", 
+                    margin: 30, 
+                    fontSize: 21 
+                },
+                axisY: { 
+                    minimum: 0, 
+                    maximum: 100, 
+                    interval: 10, 
+                    suffix: "%" 
+                }, 
+                legend: { 
+                    horizontalAlign: "center", 
+                    verticalAlign: "bottom" },
+                data: [{
+                    type: "line", 
+                    showInLegend: true, 
+                    legendText: "Week", 
+                    yValueFormatString: "##\"%\"", 
+                    dataPoints: [
+                        { y: 60, label: " 01 " },
+                        { y: 88, label: " 02 " },
+                        { y: 70, label: " 03 " },
+                        { y: 70, label: " 04 " },
+                        { y: 60, label: " 05 " },
+                        { y: 75, label: " 06 " },
+                        { y: 90, label: " 07 " },
+                        { y: 100, label: " 08 " },
+                        { y: 70, label: " 09 " },
+                    ]
+                }]
+            });
+            chart1.render();
+            
+        }
+    </script>
+</head>
+
+<body>
+    <div id="chartContainer1" style="margin-top: 20px;margin-left: 30px;height: 270px; width: 37%;z-index: -1;"></div>
+    <div id="chartContainer2" style="height: 270px; width: 37%;z-index: 0;margin-top: -270px; margin-left: 50%;"></div>
+    <div id="chartContainer3" style="margin-top: 20px;margin-left: 30px;height: 270px; width: 37%;z-index: -1;"></div>
+    <script src="ZCANVAS_URL.JS"></script>
+</body>
+
+</html>
